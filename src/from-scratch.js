@@ -1,26 +1,20 @@
 const makeIdFunc = () => {
-
+  let id = 0;
+  return () => {
+    id += 1;
+    return id;
+  };
 };
 
-const makePasswordChecker = (correctPassword) => {
+const makePasswordChecker = (correctPassword) => {};
 
-};
+const makeMultiplier = (multiplier) => {};
 
-const makeMultiplier = (multiplier) => {
+const makeFilterByLength = (length) => {};
 
-};
+const makeGradeTracker = () => {};
 
-const makeFilterByLength = (length) => {
-
-};
-
-const makeGradeTracker = () => {
-
-};
-
-const makeShoppingList = () => {
-
-};
+const makeShoppingList = () => {};
 
 module.exports = {
   makeIdFunc,

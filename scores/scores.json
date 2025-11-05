@@ -1,8 +1,8 @@
 {
   "testScores": {
     "From Scratch Tests": {
-      "FrScTe1": 0,
-      "FrScTe2": 0,
+      "FrScTe1": 1,
+      "FrScTe2": 1,
       "FrScTe3": 0,
       "FrScTe4": 0,
       "FrScTe5": 0,
@@ -127,8 +127,8 @@
     "From Scratch Tests makeShoppingList .removeItem - removes an item from the items array, returns true, and logs the right message": "FrScTe16"
   },
   "humanReadable": {
-    "From Scratch Tests": "0/17",
-    "finalTestScore": "FINAL SCORE: 1/19",
+    "From Scratch Tests": "2/17",
+    "finalTestScore": "FINAL SCORE: 3/19",
     "Debug Tests": "1/2"
   }
 }
