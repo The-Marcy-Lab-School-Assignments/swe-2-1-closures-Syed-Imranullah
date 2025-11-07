@@ -18,6 +18,7 @@ What are the core principles of encapsulation in object-oriented programming?
 ### Response 1
 
 Your response here...
+Encapsulation is the OOP principle of hiding an object's internal data and providing controlled access through methods. It ensures that an object’s state cannot be modified directly from outside, which protects the information of the data. By using private variables and public methods, encapsulation also supports better code organizing and simplicity, making code easier to maintain and understand.
 
 ---
 
@@ -40,6 +41,8 @@ First, define what a **closure** is in your own words and then explain how this 
 ### Response 2
 
 Your response here...
+
+A closure is a function that remembers and has access to variables from the scope in which it was created, even after that scope has finished executing. In the example, multiplyNumsBy returns a function (num => num * multiplier) that uses the multiplier parameter from its outer scope. This allows the inner function to “remember” the value of multiplier when multiplying each number in the array, which demonstrates a closure.
 
 ---
 
@@ -77,3 +80,21 @@ Finally, update the code snippet above to fix it.
 ### Response 3
 
 Your response here...
+The this keyword refers to the object that is currently executing the code. In the original makeAnimal snippet, makeNoise is defined as an arrow function, and arrow functions do not have their own this, they recieve it from the enclosing scope, which is not the animal object. Therefore, this.name and this.species are undefined. To fix this, we can use a regular function for makeNoise so that this correctly refers to the object:
+
+```js
+const makeAnimal = (name, species, sound) => {
+  const animal = {
+    name: name,
+    species: species,
+    makeNoise() {     // removed arrow function
+      console.log(`${this.name} the ${this.species} says ${sound}`);
+    }
+  };
+  return animal;
+};
+
+const betty = makeAnimal('betty', 'cat', 'meow');
+betty.makeNoise();
+const bugs = makeAnimal('bugs', 'bunny', 'whatsup doc');
+bugs.makeNoise();
